@@ -6,7 +6,7 @@ import me.huqiao.algs4.fundamentals.util.Stack;
 import me.huqiao.algs4.stdlib.StdOut;
 
 /**
- * LIFO stack implatement with array
+ * LIFO stack implement with array
  * @author huqiao
  * @param <Item>
  */
