@@ -4,7 +4,7 @@ package me.huqiao.algs4.fundamentals.util;
  * FIFO Queue
  * @author huqiao
  */
-public interface Queue<Item> {
+public interface Queue<Item>  extends Iterable<Item>{
 
 	/**
 	 * add item
