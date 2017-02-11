@@ -89,7 +89,7 @@ public class ArrayStack<Item> implements Stack<Item> {
 		}
 
 		@Override
-		public void remove() {
+		public void remove() { 
 		}
 	}
 	
@@ -102,7 +102,7 @@ public class ArrayStack<Item> implements Stack<Item> {
 		
 		for(Integer s : stack){
 			System.out.println(s);
-			stack.push(2000);
+			//stack.push(2000);
 		}
 	}
 }
