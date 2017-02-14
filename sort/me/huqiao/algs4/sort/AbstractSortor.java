@@ -5,6 +5,10 @@ import me.huqiao.algs4.stdlib.StdOut;
 
 public abstract class AbstractSortor implements Sortor{
 
+	static{
+		StdDraw.setCanvasSize(1000, 500);
+	}
+	
 	@Override
 	public boolean less(Comparable i1, Comparable i2) {
 		return i1.compareTo(i2) < 0;
@@ -42,18 +46,24 @@ public abstract class AbstractSortor implements Sortor{
 		}
 	}
 	
-	public void printPic(Comparable[] items,int i){
-		StdDraw.setXscale(0, 100);
-		StdDraw.setYscale(0, 100);
+	public void printPic(Comparable[] items,int i,int xScale,int yScale,int pause){
+		StdDraw.setXscale(0, xScale);
+		StdDraw.setYscale(0, yScale);
 		StdDraw.clear();
 		StdDraw.setPenColor(StdDraw.BLACK);
+		StdDraw.enableDoubleBuffering();
+		
+		int xIncrement = xScale/items.length;
+		
 		for(int x = 0; x<items.length; x++){
 			if(x>i){
 				StdDraw.setPenColor(StdDraw.GRAY);
 			}
 			Double v = Double.parseDouble(items[x].toString());
-			StdDraw.filledRectangle(x * 5,0,5/2, v/2);
+			StdDraw.filledRectangle(x * xIncrement,0,(xIncrement - .5)/2, v);
 		}
+		StdDraw.pause(pause);
+		StdDraw.show();
 	}
 
 }

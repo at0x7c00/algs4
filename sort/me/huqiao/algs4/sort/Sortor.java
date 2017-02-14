@@ -15,6 +15,6 @@ public interface Sortor {
 	
 	public void printAll(Comparable[] items);
 	
-	public void printPic(Comparable[] items,int i);
+	public void printPic(Comparable[] items,int i,int xScale,int yScale,int pause);
 	
 }

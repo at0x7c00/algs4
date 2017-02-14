@@ -2,6 +2,7 @@ package me.huqiao.algs4.sort.impl;
 
 import me.huqiao.algs4.sort.AbstractSortor;
 import me.huqiao.algs4.sort.Sortor;
+import me.huqiao.algs4.stdlib.StdRandom;
 
 public class InsertSort extends AbstractSortor implements Sortor {
 
@@ -11,17 +12,15 @@ public class InsertSort extends AbstractSortor implements Sortor {
 			for(int j = i;j > 0 && less(items[j],items[j-1]); j--){
 				exchange(items, j, j - 1); 
 			}
-			printPic(items,i);
-			try {
-				Thread.sleep(1000);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
+			printPic(items,i,100,100,100);
 		}
 	}
 	
 	public static void main(String[] args) {
-		Integer[] a = new Integer[]{11,2,52,100,9,23,3};
+		
+		int N = 100;
+		Integer[] a = StdRandom.randomData(N);
+		
 		InsertSort sortor = new InsertSort();
 		sortor.doSort(a);
 		sortor.printAll(a);
