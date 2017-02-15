@@ -1,5 +1,7 @@
 package me.huqiao.algs4.sort;
 
+import java.util.List;
+
 /**
  * @author huqiao
  */
@@ -15,6 +17,6 @@ public interface Sortor {
 	
 	public void printAll(Comparable[] items);
 	
-	public void printPic(Comparable[] items,int i,int xScale,int yScale,int pause);
+	public void printPic(Comparable[] items,int i,int xScale,int yScale,int pause,List<Integer> highlight);
 	
 }

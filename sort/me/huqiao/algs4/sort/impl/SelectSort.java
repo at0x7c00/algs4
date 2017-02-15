@@ -16,7 +16,7 @@ public class SelectSort extends AbstractSortor implements Sortor {
 				}
 			}
 			exchange(items, i, minIndex);
-			printPic(items,i,100,100,100);
+			printPic(items,i,100,100,100,minIndex);
 		}
 	}
 	

@@ -1,5 +1,9 @@
 package me.huqiao.algs4.sort;
 
+import java.awt.Color;
+import java.util.ArrayList;
+import java.util.List;
+
 import me.huqiao.algs4.stdlib.StdDraw;
 import me.huqiao.algs4.stdlib.StdOut;
 
@@ -46,9 +50,9 @@ public abstract class AbstractSortor implements Sortor{
 		}
 	}
 	
-	public void printPic(Comparable[] items,int i,int xScale,int yScale,int pause){
+	public void printPic(Comparable[] items,int i,int xScale,int yScale,int pause,List<Integer> highlight){
 		StdDraw.setXscale(0, xScale);
-		StdDraw.setYscale(0, yScale);
+		StdDraw.setYscale(0, yScale + 10);
 		StdDraw.clear();
 		StdDraw.setPenColor(StdDraw.BLACK);
 		StdDraw.enableDoubleBuffering();
@@ -58,12 +62,26 @@ public abstract class AbstractSortor implements Sortor{
 		for(int x = 0; x<items.length; x++){
 			if(x>i){
 				StdDraw.setPenColor(StdDraw.GRAY);
+			}else{
+				StdDraw.setPenColor(StdDraw.BLACK);
+			}
+			Color c = StdDraw.getPenColor();
+			if(highlight!=null && highlight.contains(x)){
+				StdDraw.setPenColor(StdDraw.RED);
+			}else{
+				StdDraw.setPenColor(c);
 			}
 			Double v = Double.parseDouble(items[x].toString());
 			StdDraw.filledRectangle(x * xIncrement,0,(xIncrement - .5)/2, v);
 		}
 		StdDraw.pause(pause);
 		StdDraw.show();
+	}
+	
+	public void printPic(Comparable[] items,int i,int xScale,int yScale,int pause,Integer highlight){
+		List<Integer> highlights = new ArrayList<Integer>();
+		highlights.add(highlight);
+		printPic(items, i, xScale, yScale, pause, highlights);
 	}
 
 }

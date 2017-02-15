@@ -1,8 +1,11 @@
 package me.huqiao.algs4.sort.impl;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import me.huqiao.algs4.sort.AbstractSortor;
 import me.huqiao.algs4.sort.Sortor;
-import me.huqiao.algs4.stdlib.StdDraw;
+import me.huqiao.algs4.stdlib.StdOut;
 import me.huqiao.algs4.stdlib.StdRandom;
 
 public class ShellSort extends AbstractSortor implements Sortor {
@@ -13,14 +16,14 @@ public class ShellSort extends AbstractSortor implements Sortor {
 		int h = 1;
 		while(h<N) h = h*3 + 1;
 		while(h>0){
-			
 			for(int i = 0;i<N;i++){
+				List<Integer> highlight = new ArrayList<Integer>();
 				for(int j = i;j>=h && less(items[j],items[j - h]); j-=h){
 					exchange(items,j,j - h);
+					highlight.add(j - h);
 				}
-				printPic(items, i,100,100,10);
+				printPic(items, i,100,100,50,highlight);
 			}
-			
 			h/=3;
 		}
 		

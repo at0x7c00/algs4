@@ -11,8 +11,8 @@ public class InsertSort extends AbstractSortor implements Sortor {
 		for(int i = 1; i<items.length; i++){
 			for(int j = i;j > 0 && less(items[j],items[j-1]); j--){
 				exchange(items, j, j - 1); 
+				printPic(items,i,100,100,50,j - 1);
 			}
-			printPic(items,i,100,100,100);
 		}
 	}
 	

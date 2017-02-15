@@ -50,7 +50,7 @@ public class ShellBars {
 
 
     public static void main(String[] args) {
-        int n = 1000;
+        int n = 200;
         double[] a = new double[n];
         for (int i = 0; i < n; i++)
           a[i] = StdRandom.uniform(0.0, 1.0);
