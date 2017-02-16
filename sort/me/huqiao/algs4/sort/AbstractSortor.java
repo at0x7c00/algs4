@@ -50,7 +50,7 @@ public abstract class AbstractSortor implements Sortor{
 		}
 	}
 	
-	public void printPic(Comparable[] items,int i,int xScale,int yScale,int pause,List<Integer> highlight){
+	public void printPic(Comparable[] items,int i,int xScale,int yScale,int pause,List<Integer> highlight,long arrayAccessCount,long arrayOperateCount){
 		StdDraw.setXscale(0, xScale);
 		StdDraw.setYscale(0, yScale + 10);
 		StdDraw.clear();
@@ -74,14 +74,16 @@ public abstract class AbstractSortor implements Sortor{
 			Double v = Double.parseDouble(items[x].toString());
 			StdDraw.filledRectangle(x * xIncrement,0,(xIncrement - .5)/2, v);
 		}
+		StdDraw.setPenColor(StdDraw.RED);
+		StdDraw.text(xScale/2, yScale, "array size:" + items.length+",array access:" + arrayAccessCount + " array operate:" + arrayOperateCount);
 		StdDraw.pause(pause);
 		StdDraw.show();
 	}
 	
-	public void printPic(Comparable[] items,int i,int xScale,int yScale,int pause,Integer highlight){
+	public void printPic(Comparable[] items,int i,int xScale,int yScale,int pause,Integer highlight,long arrayAccessCount,long arrayOperateCount){
 		List<Integer> highlights = new ArrayList<Integer>();
 		highlights.add(highlight);
-		printPic(items, i, xScale, yScale, pause, highlights);
+		printPic(items, i, xScale, yScale, pause, highlights,arrayAccessCount,arrayOperateCount);
 	}
 
 }
