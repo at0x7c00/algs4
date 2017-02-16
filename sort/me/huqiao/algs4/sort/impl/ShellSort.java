@@ -35,13 +35,39 @@ public class ShellSort extends AbstractSortor implements Sortor {
 	}
 	
 	public static void main(String[] args) {
-		int N = 100;
+		int N = 5;
 		Integer[] a = StdRandom.randomData(N);
 		
 		ShellSort sortor = new ShellSort();
 		sortor.doSort(a);
 		sortor.printAll(a);
 		
+		//shellSort(a);
 	}
+	
+	/* exercise
+	 * public static void shellSort(Integer[] a){
+		int N = a.length;
+		for(int i = 0;i<N; i++){
+			System.out.print(a[i] + "\t");
+		}
+		int h = 1;
+		while(h<N) h = h*3 + 1;
+		
+		while(h>0){
+			for(int i = 0; i<N; i++){
+				for(int j = i; j>=h && (a[j] < a[j-h]); j-=h){
+					int tmp = a[j];
+					a[j] = a[j - h];
+					a[j - h] = tmp;
+				}
+			}
+			h /= 3;
+		}
+		System.out.println();
+		for(int i = 0;i<N; i++){
+			System.out.print(a[i] + "\t");
+		}
+	}*/
 
 }
