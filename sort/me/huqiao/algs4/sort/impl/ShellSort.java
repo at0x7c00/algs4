@@ -26,7 +26,7 @@ public class ShellSort extends AbstractSortor implements Sortor {
 					highlight.add(j - h);
 					arrayOperate++;
 				}
-				printPic(items, i,100,100,50,highlight,arrayAccessCount,arrayOperate);
+				printPic(items, i,items.length,items.length,10,highlight,arrayAccessCount,arrayOperate);
 			}
 			h/=3;
 		}
@@ -35,7 +35,7 @@ public class ShellSort extends AbstractSortor implements Sortor {
 	}
 	
 	public static void main(String[] args) {
-		int N = 5;
+		int N = 100;
 		Integer[] a = StdRandom.randomData(N);
 		
 		ShellSort sortor = new ShellSort();
