@@ -89,7 +89,6 @@ public class QuickSort extends AbstractSortor implements Sortor {
 	public static void main(String[] args) {
 		Integer[] data = StdRandom.randomData(100);
 		
-		StdDraw.pause(5000);
 		QuickSort sort = new QuickSort();
 		sort.doSort(data);
 		
