@@ -30,7 +30,7 @@ public class MergeSort extends AbstractSortor implements Sortor{
 		for(int i = lo;i<=hi;i++){
 			hightLight.add(i);
 		}
-		printPic(items,items.length,items.length,items.length,20,hightLight,0,0);
+		printPic(items,items.length,items.length,items.length,50,hightLight,0,0);
 	}
 	
 	private void merge(Comparable[] items,int lo,int mid,int hi){
@@ -56,7 +56,7 @@ public class MergeSort extends AbstractSortor implements Sortor{
 	}
 	
 	public static void main(String[] args) {
-		Integer[] data = StdRandom.randomData(500);
+		Integer[] data = StdRandom.randomData(100);
 		MergeSort sort = new MergeSort();
 		sort.doSort(data);
 		sort.printAll(data);

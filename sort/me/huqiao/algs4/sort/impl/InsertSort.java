@@ -2,6 +2,7 @@ package me.huqiao.algs4.sort.impl;
 
 import me.huqiao.algs4.sort.AbstractSortor;
 import me.huqiao.algs4.sort.Sortor;
+import me.huqiao.algs4.stdlib.StdDraw;
 import me.huqiao.algs4.stdlib.StdRandom;
 
 public class InsertSort extends AbstractSortor implements Sortor {
@@ -23,7 +24,6 @@ public class InsertSort extends AbstractSortor implements Sortor {
 		
 		int N = 100;
 		Integer[] a = StdRandom.randomData(N);
-		
 		InsertSort sortor = new InsertSort();
 		sortor.doSort(a);
 		sortor.printAll(a);

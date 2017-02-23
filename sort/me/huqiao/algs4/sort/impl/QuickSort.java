@@ -28,17 +28,25 @@ public class QuickSort extends AbstractSortor implements Sortor {
 
 	private int paratition(Comparable[] items, int lo, int hi) {
 		
+		//lo mark
 		int i = lo;
+		//hi mark
 		int j = hi + 1;
 		Comparable v = items[lo];
 		
 		while(true){
 			
+			//find an item bigger than v
 			while(less(items[++i],v) && (++arrayAccessCount>0)) if(i==hi) break;
+			//find an item smaller than v
 			while(less(v,items[--j]) && (++arrayAccessCount>0)) if(j==lo) break;
 			
+			// when lo mark meet hi mark then stop all(sort complate)
 			if(i>=j) break;
+			
+			//exchange smaller item and bigger item from left to right
 			exchange(items, i, j);
+			
 			arrayOperateCount++;
 			printPic2(items, 100, 100, 100, arrayAccessCount, arrayOperateCount,lo,hi,j,false);
 			
