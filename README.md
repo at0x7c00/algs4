@@ -1,5 +1,8 @@
 Code about book "Algorithms 4th Edition".
 
+Video record by [Bandicam](http://www.bandicam.com/).Use [格式工厂](http://www.pcfreetime.com/) to transform MP4 file to GIF picture.
+
+
 #Sort#
 ##Insert sort##
 ![Alt Insert sort](./sort/me/huqiao/algs4/sort/pic/insert-sort.gif "Insert sort")
