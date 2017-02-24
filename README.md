@@ -1,6 +1,6 @@
 Code about book "Algorithms 4th Edition".
 
-Video record by [Bandicam](http://www.bandicam.com/){:target="_blank"}. Use [格式工厂](http://www.pcfreetime.com/){:target="_blank"} to convert MP4 file to GIF picture.
+Video record by [Bandicam](http://www.bandicam.com/). Use [格式工厂](http://www.pcfreetime.com/) to convert MP4 file to GIF picture.
 
 
 #Sort#
