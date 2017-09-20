@@ -4,6 +4,7 @@
 	<classpathentry kind="src" path="fundamentals"/>
 	<classpathentry kind="src" path="data"/>
 	<classpathentry kind="src" path="sort"/>
+	<classpathentry kind="src" path="search"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.7.0_79"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
