@@ -10,7 +10,7 @@ public class BSTTest {
 		for(int i = 0;i<10;i++){
 			int r = new Random().nextInt(100);
 			System.out.print(r + "\t");
-			bst.put(i, i);
+			bst.put(r, r);
 			last = i;
 		}
 		System.out.println("last=" + last);
