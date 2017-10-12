@@ -152,6 +152,14 @@ public class BST<K extends Comparable<K>,V> extends AbstractST<K,V> implements S
 		row += root.value + "\t";
 		res.put(rowIndex, row);
 		print(root.left,rowIndex+1,res);
+		
+		String nextRow = res.get(rowIndex + 1);
+		if(nextRow == null){
+			nextRow = "";
+		}
+		nextRow += "|\t";
+		res.put(rowIndex + 1, nextRow);
+		
 		print(root.right,rowIndex+1,res);
 	}
 	
