@@ -29,7 +29,7 @@ public class ArrayQueue<Item> implements Queue<Item> {
 			newArray[i] = items[i];
 		}
 		items = newArray;
-		StdOut.println("resize queye array size to " + items.length);
+		//StdOut.println("resize queye array size to " + items.length);
 	}
 
 	@Override
