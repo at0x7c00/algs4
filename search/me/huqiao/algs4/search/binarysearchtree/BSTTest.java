@@ -1,11 +1,6 @@
 package me.huqiao.algs4.search.binarysearchtree;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 import java.util.Random;
-
-import me.huqiao.algs4.search.Node;
 
 public class BSTTest {
 
