@@ -12,6 +12,7 @@ public class ArrayListGraph extends Graph {
 
 	public ArrayListGraph(int V) {
 		super(V);
+		init();
 	}
 	
 	public ArrayListGraph(InputStream in) throws Exception{
